@@ -1,0 +1,43 @@
+.carousel {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.carousel img {
+    max-height: 599px;
+    opacity: 1;
+}
+
+a.left.carousel-control {
+    background-position: 25% 50%;
+    background-image: url('../images/prev.png');
+}
+
+a.right.carousel-control {
+    background-position: 75% 50%;
+    background-image: url('../images/next.png');
+}
+
+a.left.carousel-control,
+a.right.carousel-control {
+    width: 30%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+a.left.carousel-control:hover,
+a.right.carousel-control:hover {
+    opacity: 0.75;
+}
+
+.button-thumb {
+    background-color: #222;
+    color: #9d9d9d;
+    border: none;
+}
+
+.button-thumb:focus {
+    background-color: #080808;
+    color: #fff;
+    outline: none;
+}
