@@ -37,6 +37,10 @@ a.right.carousel-control:hover {
 }
 
 .button-thumb:focus {
+    outline: none;
+}
+
+.button-thumb.active {
     background-color: #080808;
     color: #fff;
     outline: none;

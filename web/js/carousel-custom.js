@@ -25,14 +25,14 @@ function init(){
         buttons[i].addEventListener("mousedown", downButton);
     }
 
-    oldActIndex = activeIndex;
+    var oldActIndex = activeIndex;
     activeIndex = getActiveIndexFromStorage();
 
 
     items[oldActIndex].className = "item";
     items[activeIndex].className = "item active";
 
-    focusButton();
+    focusButton(oldActIndex);
 }
 
 function slideImage(direction){
@@ -46,11 +46,12 @@ function slideImage(direction){
     items[oldActIndex].className = "item";
     items[activeIndex].className = "item active";
 
-    focusButton();
+    focusButton(oldActIndex);
 }
 
-function focusButton(){
-    buttons[activeIndex].focus();
+function focusButton(oldActiveIndex){
+    buttons[oldActiveIndex].className = 'button-thumb';
+    buttons[activeIndex].className = 'button-thumb active';
 }
 
 function downButton(event){
@@ -63,6 +64,8 @@ function downButton(event){
 
     items[oldActIndex].className = "item";
     items[activeIndex].className = "item active";
+
+    focusButton(oldActIndex);
 }
 
 function downArrowKey(event) {
