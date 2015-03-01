@@ -2,6 +2,6 @@
 
 ##Demo
 
-<img src="/images/screen.jpg" alt="">
+<img src="/web/images/screen.jpg" alt="">
 
 * http://alexeyivanov.me/portfolio/single
