@@ -24,11 +24,18 @@
 
 .nav-for-carousel {
     max-width: 900px;
-    background-color: #222;
     margin: 0.25em auto;
 }
 
 .carousel-indicators {
     display: none;
     bottom: -5px;
+}
+
+.carousel-indicators li {
+    border: 1px solid #333;
+}
+
+.carousel-indicators li.active {
+    background-color: #333;
 }
