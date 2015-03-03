@@ -6,23 +6,34 @@ $('document').ready(function(){
         interval: 0
     });
 
-    cloneCarouselIndicators();
+    $(document.createElement('div'))
+        .addClass('nav-for-carousel row center-block')
+        .appendTo($(".portfolio-series"));
+
+    createCarouselIndicators();
 
     $('.carousel').bind('slid.bs.carousel', function(){
         deleteCarouselIndicators();
-        cloneCarouselIndicators();
+        createCarouselIndicators();
     });
 
 });
 
+function createCarouselIndicators(){
+    cloneCarouselIndicators();
+    appendCarouselIndicators();
+}
+
 function cloneCarouselIndicators(){
     var carouselIndicators = document.getElementsByClassName('carousel-indicators')[0];
     carouselIndicatorsClone = carouselIndicators.cloneNode(true);
-
-    navForCarousel = document.getElementsByClassName('nav-for-carousel')[0];
-    navForCarousel.appendChild(carouselIndicatorsClone);
     carouselIndicatorsClone.style.position = 'relative';
     carouselIndicatorsClone.style.display = 'inherit';
+}
+
+function appendCarouselIndicators(){
+    navForCarousel = document.getElementsByClassName('nav-for-carousel')[0];
+    navForCarousel.appendChild(carouselIndicatorsClone);
 }
 
 function deleteCarouselIndicators(){
